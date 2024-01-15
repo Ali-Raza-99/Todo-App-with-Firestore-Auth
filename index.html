@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodApp-with-database</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c3268e6dd8.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD9ysj3wHQo-7UnBqsppTrmVMXWkjGhIbI",
+            authDomain: "todo-app-withdatabase.firebaseapp.com",
+            projectId: "todo-app-withdatabase",
+            storageBucket: "todo-app-withdatabase.appspot.com",
+            messagingSenderId: "201155483977",
+            appId: "1:201155483977:web:79ed7c570f29ed637fa298",
+            measurementId: "G-EV53H690J9"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // let username = document.getElementById('username')
+
+        
+//         firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     let uid = user.uid;
+//     let email = user.email;
+
+//     db.collection('Users')
+//       .doc(uid)
+//       .get()
+//       .then((doc) => {
+//         if (doc.exists) {
+//           console.log("Document data:", doc.data());
+//           // currentUser = doc.data().name
+//           logUser.innerHTML = `
+//             <h5>${doc.data().name}</h5>
+//           `;
+//           console.log(uid, email, doc.data().name);
+//         }
+//       })
+//       .catch((error) => {
+//         console.log("Error getting document:", error);
+//       });
+//   }
+// });
+
+            
+    
+
+// import{
+// getFirestore, doc, getDoc, setDoc, collection , addDoc, updateDoc, deleteDoc,deleteField
+// }
+// from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"
+
+    </script>
+
+</head>
+
+<body onload="currentUser()">
+
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container-fluid d-flex justify-content-around">
+            <div id="username">
+                <h5></h5>
+            </div>
+           <center><div class="navbar-brand h1">TODO APP</div></center> 
+            <div class="auth-btn">
+               <a href="login.html"> <button class="btn btn-outline-primary">login</button></a>
+             <a href="signin.html"><button id="signup_btn" class="btn btn-outline-primary mx-1">signup</button></a>
+                <button id="signout_btn" onclick="signOutUser()" class="btn btn-outline-primary mx-1">signout</button>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- <div class="container">
+      <center class="mt-3"> <h3>Todo App</h3></center>
+      
+    </div> -->
+    <div class="container mt-3 d-flex justify-content-center">
+        <div class="main mt-3 ">
+            <div class="input-group">
+
+                <input id="inp" type="text" class="form-control" placeholder="Enter Todos"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button  class="btn btn-success" type="button" id="addBtn"><i
+                        class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="container d-flex justify-content-center mt-2 mb-1">
+        <div class="dataBox p-1" id="databox">
+            <!-- <div class="todos-parent row d-flex align-items-center mb-1">
+                <div class="data px-2 col-lg-9 com-md-9 col-sm-9 col-9">
+                    <h4>the quick brown fox jumps over the lazy dog</h4>
+                </div>
+                <div class="dynamic-btn  col-lg-2 col-md-2 col-sm-2 col-2 d-flex">
+                    <button onclick="editBtn(this)" class="btn btn-info mx-2"><i class="fa-solid fa-pen"></i></button>
+                    <button onclick="delBtn(this)" class="btn btn-danger"><i class="fa-solid fa-minus"></i></button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+</body>
+
+
+
+
+<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

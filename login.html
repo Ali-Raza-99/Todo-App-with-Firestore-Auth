@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- <script src="https://kit.fontawesome.com/c3268e6dd8.js" crossorigin="anonymous"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD9ysj3wHQo-7UnBqsppTrmVMXWkjGhIbI",
+            authDomain: "todo-app-withdatabase.firebaseapp.com",
+            projectId: "todo-app-withdatabase",
+            storageBucket: "todo-app-withdatabase.appspot.com",
+            messagingSenderId: "201155483977",
+            appId: "1:201155483977:web:79ed7c570f29ed637fa298",
+            measurementId: "G-EV53H690J9"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+// import{
+// getFirestore, doc, getDoc, setDoc, collection , addDoc, updateDoc, deleteDoc,deleteField
+// }
+// from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"
+
+    </script>
+</head>
+
+<body >
+
+    <div class="container d-flex justify-content-center mt-5 signin-form">
+
+        <div class="card" style="width: 22rem; ">
+            <h4 class="px-4">Log in Page</h4>
+            <div class="card-body">
+                <input type="email" class="form-control mt-2" id="login-inp" placeholder="enter valid email address">
+                <!-- <label for="inputPassword5" class="form-label">Password</label> -->
+                <input type="password" id="login-password" class="form-control mt-4" placeholder="enter valid password" aria-describedby="passwordHelpBlock">
+                <div id="passwordHelpBlock" class="form-text">
+                </div>
+                <a href="#" onclick="login()" class="btn btn-primary mt-4">Login</a>
+                <div id="login-error-message" class="mt-4 ">
+                    <p ></p>
+                </div>
+                <div>
+               <a href="signin.html"> <p class="page-change mt-2 ">signin</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

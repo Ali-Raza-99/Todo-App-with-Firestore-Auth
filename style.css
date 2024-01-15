@@ -1,0 +1,125 @@
+.main{
+    width: 70%;
+}
+.dataBox{
+    /* background-color: #d8d8d8; */
+    width: 70%;
+    height: 500px;
+    border: 1px solid rgb(191 192 191);
+    overflow-y:scroll ;
+    overflow-x:hidden ;
+}
+.todos-parent{
+    padding: 13px;
+    height: auto;
+    background-color: rgb(219, 224, 226);;
+    /* background-color: rgb(39 38 38); */
+}
+.input-group{
+    height: 58px;
+}
+.main button{
+    width: 68px;
+}
+.dynaminc-btn{
+    border-left: 1px solid white !important;
+    align-self: flex-end !important;
+}
+.data h4{
+    margin: 0;
+    color: rgb(39 38 38);
+    font-size: 17px;
+    font-weight: 500;
+}
+.dynamic-btn .btn{
+    height: auto;
+    width: auto;
+    border-radius: 100px !important;
+}
+
+#dynamic-input{
+    width: 50px;
+}
+.navbar {
+    height: 63px;
+}
+
+/* sign in css ***********************************************************/
+.signin-form a{
+    width: 100% !important;
+}
+.page-change{
+    color: #0d6efd;
+    text-decoration: underline;
+        
+}
+#login-error-message,#signin-error-message{
+    font-size: small;
+    color: red;
+}
+#username{
+    color: white !important;
+}
+
+/* sign in css ***********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries ***************************************************************/
+
+
+@media only screen and (max-width: 3000px) and (min-width:766px) {
+        .dynamic-btn{
+            margin-left: 43px !important;
+        }
+        .btn-danger{
+            margin-left: 4px;
+        }
+}
+@media only screen and (max-width: 992px) {
+    .data h4{
+        font-size: 14px ;
+        font-weight: 400 ;
+    }
+    .main,.dataBox{
+        width: 100%;
+    }
+
+  }
+@media only screen and (max-width: 767px){ 
+    .dynaminc-btn{
+        margin-left: 46px !important;
+    }
+}
+@media only screen and (max-width: 490px){ 
+    .dynaminc-btn{
+        padding-left: 0px !important;
+    }
+    .input-group {
+        height: auto;
+    }
+    .data h4{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .dynamic-btn i{
+        font-size: 11px;
+    }
+   
+}
+@media only screen and (max-width: 432px){ 
+        .dynamic-btn {
+            margin-left: -24px !important;
+        }
+}
